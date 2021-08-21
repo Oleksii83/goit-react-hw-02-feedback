@@ -3,15 +3,15 @@ import './Feedback.css';
 
 class Feedback extends React.Component {
   state = {
-    valueGood: 0,
-    valueNeutral: 0,
-    valueBad: 0,
+    good: 0,
+    neutral: 0,
+    bad: 0,
   };
 
   clickGood = () => {
     this.setState(prevState => {
       return {
-        valueGood: prevState.valueGood + 1,
+        Good: prevState.Good + 1,
       };
     });
   };
@@ -19,7 +19,7 @@ class Feedback extends React.Component {
   clickNeutral = () => {
     this.setState(prevState => {
       return {
-        valueNeutral: prevState.valueNeutral + 1,
+        Neutral: prevState.Neutral + 1,
       };
     });
   };
@@ -27,7 +27,7 @@ class Feedback extends React.Component {
   clickBad = () => {
     this.setState(prevState => {
       return {
-        valueBad: prevState.valueBad + 1,
+        Bad: prevState.Bad + 1,
       };
     });
   };
@@ -51,9 +51,9 @@ class Feedback extends React.Component {
           <p className="FeedbackStatisticTitle"> Statistic </p>
           <div className="FeedbackStatisticSynopsis">
             <ul className="FeedbackStatisticList">
-              <li className="FeedbackStatisticItem"> Good: {this.state.valueGood} </li>
-              <li className="FeedbackStatisticItem"> Neutral: {this.state.valueNeutral}</li>
-              <li className="FeedbackStatisticItem"> Bad: {this.state.valueBad}</li>
+              <li className="FeedbackStatisticItem"> Good: {this.state.Good} </li>
+              <li className="FeedbackStatisticItem"> Neutral: {this.state.Neutral}</li>
+              <li className="FeedbackStatisticItem"> Bad: {this.state.Bad}</li>
             </ul>
           </div>
         </div>
